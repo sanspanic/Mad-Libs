@@ -1,4 +1,5 @@
 import React from "react";
+import "./Story.css";
 
 const Story = ({ adj1, noun1, noun2, restart, topic }) => {
   const StoryOptions = {
@@ -12,11 +13,13 @@ const Story = ({ adj1, noun1, noun2, restart, topic }) => {
             a bulletin ${adj1} ${noun1} ${noun2}.`,
   };
   return (
-    <>
-      <h3>Your story</h3>
-      <div>{StoryOptions[topic]}</div>
-      <button onClick={restart}>Restart</button>
-    </>
+    <div className="Story-container">
+      <h3 className="Story-h3">Your story</h3>
+      <div className="Story-story">{StoryOptions[topic]}</div>
+      <button className="btn" onClick={restart}>
+        Restart
+      </button>
+    </div>
   );
 };
 
